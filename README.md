@@ -38,7 +38,7 @@ POCKETBASE_USER=your-collection-admin-user
 POCKETBASE_PASSWORD=your-collection-admin-password
 API_ENDPOINT=https://rickandmortyapi.com/graphql
 ```
-check if you test pocketbase collection with one row available
+check if you test pocketbase collection with one row available and then:
 ```
 node app.js
 ```
