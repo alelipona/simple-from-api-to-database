@@ -1,11 +1,10 @@
 const CronJob = require("node-cron");
-const  getRowFromApi = require('./getRowFromApi');
-const createRowInCollection = require('./createRowInCollection')
-const getLatestId = require('./getLatestId')
-const getToken = require('./getAuthToken')
-const helper = require('../helper')
+const  getRowFromApi = require('./api/getRowFromApi');
+const createRowInCollection = require('./database/createRowInCollection');
+const getLatestId = require('./database/getLatestId');
+const getToken = require('./database/getAuthToken');
 
-const endpoint = 'https://rickandmortyapi.com/graphql'
+const endpoint = process.env['API_ENDPOINT'];
 console.log('process.env.POCKETBASE_HOST::: ', process.env['POCKETBASE_HOST']);
 const query = `
 query Query($characterId: ID!) {
@@ -19,11 +18,10 @@ query Query($characterId: ID!) {
 exports.initScheduledJobs = async() => {
   var token = await getToken();
   var id = await getLatestId(token);
-  var time = 20
+  var time = 20 //every 20th second
 const scheduledJobFunction = CronJob.schedule("*/"+time+" * * * * *", async() => {
     console.log("I'm executed on a schedule!");
     console.log('id::: ', id);
-    time = helper.randomIntFromInterval(8,15)
     id++
 
     
