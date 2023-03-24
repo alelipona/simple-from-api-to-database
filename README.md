@@ -27,10 +27,8 @@ git clone https://github.com/alelipona/simple-from-api-to-database.git
 
 ```
 cd simple-from-api-to-database
-
 ```
 ```
-
 npm install
 ```
 create file .env with following:
@@ -38,12 +36,9 @@ create file .env with following:
 POCKETBASE_HOST=https://your-pockethost-account.pockethost.io
 POCKETBASE_USER=your-collection-admin-user
 POCKETBASE_PASSWORD=your-collection-admin-password
-
 API_ENDPOINT=https://rickandmortyapi.com/graphql
-
 ```
 check if you test pocketbase collection with one row available
-
 ```
 node app.js
 ```
