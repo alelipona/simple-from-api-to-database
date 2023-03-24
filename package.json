@@ -1,0 +1,26 @@
+{
+  "name": "simple-from-api-to-database",
+  "version": "1.0.0",
+  "description": "This script make periodically requests to api and save result to database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api-scraping",
+    "data-mining",
+    "api-fetcher",
+    "api-grabber",
+    "api-sheduled",
+    "periodically",
+    "requests"
+  ],
+  "author": "@alelipona",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "dotenv": "^16.0.3",
+    "node-cron": "^3.0.2",
+    "pocketbase": "^0.12.1"
+  }
+}
